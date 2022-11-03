@@ -1,0 +1,170 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+<div class="block07 block07desing5">
+    <div class="container">
+        <div id="block07desing4-slider" class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    {{#block07}}
+                    <li class="splide__slide">
+                        <div class="card text-center h-100">
+                            <div class="single-course" style = "background-image: url({{imgurl}});">
+                            {{#block07priceshow}}
+                                <div class="enrol">
+                                    {{cost}} {{currency}}
+                                </div>
+                            {{/block07priceshow}}
+                            </div>
+                            <div class="card-body" style="height:120px;"                            > 
+                                <small>
+                                    <a href="{{categorylink}}" class="text-decoration-none"><i class="fa fa-chevron-circle-right"> </i> {{categoryName}}</a>
+                                </small>
+                                <h6 class="card-title post-heading">
+                                    <a href="{{courselink}}" class="text-decoration-none">
+                                        {{#block07shortname}}{{shortname}}{{/block07shortname}}
+                                        {{#block07fullname}}
+                                            {{#shortentext}}65,{{{fullname}}}{{/shortentext}}
+                                        {{/block07fullname}}
+                                    </a>
+                                </h6>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <small class="hytext">Updated {{update}}</small>
+                            </div>
+                        </div>
+                    </li>
+                    {{/block07}}
+                </ul>
+            </div>
+        </div>
+    </div>    
+</div>
+<script>
+    document.addEventListener( 'DOMContentLoaded', function () {
+        new Splide( '#block07desing4-slider', {
+            type    : 'loop',
+            autoplay: true,
+            gap: '1rem',
+            perPage: 4,
+            perMove: 1,
+            autoHeight: true,
+            pagination: false,
+            direction: document.dir,
+            breakpoints: {
+                1200:{ 
+                    perPage: 3,
+                },
+                980:{
+                    perPage: 2,
+                },
+                700: {
+                    perPage: 1,
+                    pagination: false,
+            },
+            }
+        } ).mount();
+    } );
+</script>
+<style>
+.block07 .splide__container {
+    position: relative;
+    box-sizing: border-box;
+  }
+  .block07 .splide__list {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: -webkit-max-content;
+    width: max-content;
+    will-change: auto;
+  }
+  .block07 .splide.is-active .splide__list {
+    display: flex;
+    align-items: flex-start;
+  }
+  .block07 .splide__pagination {
+    display: inline-flex;
+    align-items: center;
+    width: 40%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .block07 .splide__pagination li {
+    list-style-type: none;
+    display: inline-block;
+    line-height: 1;
+    margin: 0;
+  }
+  .block07 .splide__pagination li button {
+    background-color: transparent;
+    border: 1px solid {{{sitecolor}}};
+    height: 10px;
+    margin: 0 7px;
+    width: 10px;
+    border-radius: 50%;
+  }
+  .block07 .splide__pagination li button.is-active {
+    background-color: {{{sitecolor}}};
+  }
+  .splide {
+    visibility: hidden;
+  }
+  .block07 .splide,
+  .block07 .splide__slide {
+    position: relative;
+    outline: none;
+  }
+  .block07 .splide__slide {
+    box-sizing: border-box;
+    list-style-type: none !important;
+    margin: 0;
+    flex-shrink: 0;
+  }
+  .block07 .splide__slide img {
+    vertical-align: bottom;
+  }
+  .block07 .splide__slider {
+    position: relative;
+  }
+  .block07 .splide__track {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  .block07 .splide--draggable > .splide__track > .splide__list > .splide__slide {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .block07 .splide--ttb > .splide__track > .splide__list {
+    display: block;
+  }
+  .block07 .splide--ttb > .splide__pagination {
+    width: auto;
+  }
+  .block07 .splide__arrow--next {
+    right: 0em;
+  }
+  .block07 .splide__arrow--prev {
+    left: 0em;
+  }
+  .block07 .splide__arrow {
+    top: 1%;
+    background:  {{{sitecolor}}};
+  }
+</style>

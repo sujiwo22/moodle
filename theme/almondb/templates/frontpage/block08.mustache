@@ -1,0 +1,124 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{#block08enabled}}
+{{#block08desing1}}
+  {{> theme_almondb/frontpage/block08_1 }}
+{{/block08desing1}} 
+{{#block08desing2}}
+  {{> theme_almondb/frontpage/block08_2 }}
+{{/block08desing2}}
+{{#block08desing3}}
+  {{> theme_almondb/frontpage/block08_3 }}
+{{/block08desing3}}
+{{#block08desing4}}
+  {{> theme_almondb/frontpage/block08_4 }}
+{{/block08desing4}}
+{{#block08desing5}}
+  {{> theme_almondb/frontpage/block08_5 }}
+{{/block08desing5}}
+{{^block08desing3}}
+<style>
+  .splide__container {
+    position: relative;
+    box-sizing: border-box;
+  }
+  .splide__list {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: -webkit-max-content;
+    width: max-content;
+    will-change: auto;
+  }
+  .splide.is-active .splide__list {
+    display: flex;
+    align-items: flex-start;
+  }
+  .splide__pagination {
+    display: inline-flex;
+    align-items: center;
+    width: 40%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .splide__pagination li {
+    list-style-type: none;
+    display: inline-block;
+    line-height: 1;
+    margin: 0;
+  }
+  .splide__pagination li button {
+    background-color: transparent;
+    border: 1px solid {{{sitecolor}}};
+    height: 10px;
+    margin: 0 7px;
+    width: 10px;
+    border-radius: 50%;
+  }
+  .splide__pagination li button.is-active {
+    background-color: {{{sitecolor}}};
+  }
+  .splide {
+    visibility: hidden;
+  }
+  .splide,
+  .splide__slide {
+    position: relative;
+    outline: none;
+  }
+  .splide__slide {
+    box-sizing: border-box;
+    list-style-type: none !important;
+    margin: 0;
+    flex-shrink: 0;
+  }
+  .splide__slide img {
+    vertical-align: bottom;
+  }
+  .splide__slider {
+    position: relative;
+  }
+  .splide__track {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  .splide--draggable > .splide__track > .splide__list > .splide__slide {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .splide--ttb > .splide__track > .splide__list {
+    display: block;
+  }
+  .splide--ttb > .splide__pagination {
+    width: auto;
+  }
+  .splide__arrow--next {
+    right: 0em;
+  }
+  .splide__arrow--prev {
+    left: 0em;
+  }
+  .splide__arrow {
+    top: 1%;
+    background:  {{{sitecolor}}};
+  }
+</style>
+{{/block08desing3}}
+{{/block08enabled}}

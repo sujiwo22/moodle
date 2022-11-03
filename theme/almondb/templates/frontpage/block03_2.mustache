@@ -1,0 +1,70 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+<div class="block03desing2 blockbgwhite">
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-12 text-center blockbgcolor-b">
+                <div class="section-title-fp hytext">
+                    <h4>{{{block03header}}}</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row text-left">
+        {{#block03}}
+            <div class="col-12 col-md-6 m-auto col-lg-4 pb-4">
+                <div class="fdb-box fdb-touch">
+                    <div class="">
+                        <h6><a class="text-decoration-none" href="{{link}}">{{title}}</a></h6>
+                    </div>
+                    <p>{{caption}}</p>
+                </div>
+            </div>
+        {{/block03}}
+        </div>
+    </div>
+</div>
+<style>
+.block03desing2 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.block03desing2 .fdb-box {
+  height:200px;
+  background: #ffffff;
+  padding: 2rem 2rem;
+  overflow: hidden;
+  color: #444444;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.3125rem 0.875rem 0 rgba(129, 129, 129, 0.2) !important;
+}
+.block03desing2 .fdb-touch {
+  border-top: solid 0.3125rem {{{sitecolor}}};
+  z-index: 2;
+}
+.fdb-box h6 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+</style>
